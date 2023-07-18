@@ -41,7 +41,7 @@ export default function Projects2() {
             title: "Portfolio Website",
             img: '/assets/portfolio-preview.png',
             desc: "Personal Portfolio website built using ReactJS and Bootstrap",
-            code: "https://github.com/Mohammed-taherali/My-portfolio",
+            code: "https://github.com/Mohammed-taherali/personal-portfolio",
             view: "https://mohammedtaherali.netlify.app/"
         },
         {

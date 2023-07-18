@@ -7,14 +7,16 @@ import MyNav from "../components/MyNav";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Education from "../components/Education";
 
 export default function App() {
   return (
-    <>
+    <main>
       <MyNav />
       <AboutMe />
       <Skills />
       <Projects />
-    </>
+      <Education />
+    </main>
   )
 }

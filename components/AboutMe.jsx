@@ -33,7 +33,7 @@ export default function AboutMe() {
     return (
         <section className="main-section" id="about">
             <div className="col1">
-                <h1>Hi There, <br />I am Mohammed <span className="colored">Taherali</span></h1>
+                <h1>Hi There, <br />I am <span className="colored">Mohammed Taherali</span></h1>
                 <h3 className="into-part">
                     I am into <span className="colored"><Typed
                         strings={["Web Development", 'Frontend Development', 'Backend Development']}
