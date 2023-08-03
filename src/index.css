@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -266,6 +270,11 @@ li::marker {
   margin: 0;
 }
 
+/* force green color on code button  */
+.green-colored {
+  background-color: #198754 !important;
+}
+
 .arrow-icon {
   color: #000000;
   cursor: pointer;
@@ -386,6 +395,170 @@ li::marker {
 }
 
 /* Education section css - end */
+
+/* GetInTouch section css - start */
+
+.contact-section {
+  padding: 2em;
+  background-color: #4a00e0;
+  height: 100vh;
+}
+
+.contact-cont {
+  /* height: 500px; */
+  width: 80%;
+  margin: auto;
+  /* border: 10px solid black; */
+  background-color: #e5ecfb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  gap: 1em;
+}
+
+.contact-img-cont,
+.contact-form {
+  width: 50%;
+  /* border: 1px solid; */
+}
+
+.contact-img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form-input {
+  border: none !important;
+  width: 100%;
+}
+
+.ncf1 {
+  width: 50%;
+}
+
+.custom-input {
+  border: none !important;
+  outline: none !important;
+}
+
+.input-cont {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  /* justify-content: center; */
+  background-color: white;
+  padding: 0.1em 0.5em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.input-cont:last-of-type {
+  margin-bottom: 0;
+}
+
+.input-cont:focus {
+  outline: none;
+  border: 2px solid dodgerblue;
+  /* box-shadow: 12px 10px 10px 1px rgba(39, 39, 39, 0.5); */
+  /* box-shadow: 5px 5px 5px 1px dodgerblue; */
+  box-shadow: 0 0 10px dodgerblue;
+}
+
+.form-control:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-cont {
+  width: 40%;
+  margin-left: auto;
+}
+
+.submit-btn {
+  margin-top: 1em;
+  background-color: #2506ad !important;
+}
+
+.try-cont {
+  background-color: white;
+}
+
+.try-cont:focus {
+  border: 2px solid black;
+}
+
+.i-t1 {
+  border: none;
+}
+
+.i-t1:focus {
+  outline: none;
+}
+
+/* testing css - start */
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  width: 50px;
+  text-align: center;
+  height: 80px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  border: none;
+  outline: none;
+  border: 2px solid dodgerblue;
+  /* box-shadow: 12px 10px 10px 1px rgba(39, 39, 39, 0.5); */
+  /* box-shadow: 5px 5px 5px 1px dodgerblue; */
+  box-shadow: 0 0 10px dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* testing css - end */
+
+/* .contact-form-input:focus {
+  outline: none;
+} */
+
+/* .input-cont:focus {
+  border: 3px solid blue;
+} */
+
+/* GetInTouch section css - end */
 
 /* media queries start */
 /* media queries for devices with width less than 320px */
