@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faComments,
@@ -26,7 +25,27 @@ export default function GetInTouch() {
 
   function submitForm(e) {
     e.preventDefault();
+
+    // Get all input fields and textarea
+    const inputs = document.querySelectorAll('input, textarea');
+
+    // Check if any field is empty
+    let isAnyFieldEmpty = false;
+    inputs.forEach((input) => {
+      if (!input.value.trim()) {
+        isAnyFieldEmpty = true;
+      }
+    });
+
+    if (isAnyFieldEmpty) {
+      alert('Please fill in all the fields.');
+    } else {
+      alert(
+        'We have successfully received your message and we will soon get in touch with you!'
+      );
+    }
   }
+
 
   return (
     <section id="contact" className="contact-section">
@@ -36,10 +55,10 @@ export default function GetInTouch() {
       </h1>
       <div className="contact-cont">
         <div className="contact-img-cont">
-          <img src="/getInTouchImg3.png" className="contact-img" />
+          <img src="/getInTouchImg.png" className="contact-img" />
         </div>
         <div className="ncf1">
-          <form action="submitForm">
+          <form onSubmit={submitForm}>
             <div className="form-group input-cont" id="userNameCont">
               <FontAwesomeIcon icon={faUser} id="userNameIcon" />
               <input
@@ -49,7 +68,7 @@ export default function GetInTouch() {
                 id="username"
                 placeholder="Name"
                 autoComplete="off"
-                onClick={() => handleInputClick("userNameCont", "userNameIcon")}
+                onFocus={() => handleInputClick("userNameCont", "userNameIcon")}
                 onBlur={() => handleInputBlur("userNameCont", "userNameIcon")}
               />
             </div>
@@ -62,7 +81,7 @@ export default function GetInTouch() {
                 id="email"
                 placeholder="Email"
                 autoComplete="off"
-                onClick={() => handleInputClick("emailCont", "emailIcon")}
+                onFocus={() => handleInputClick("emailCont", "emailIcon")}
                 onBlur={() => handleInputBlur("emailCont", "emailIcon")}
               />
             </div>
@@ -75,7 +94,7 @@ export default function GetInTouch() {
                 id="phone"
                 placeholder="Phone"
                 autoComplete="off"
-                onClick={() => handleInputClick("phoneCont", "phoneIcon")}
+                onFocus={() => handleInputClick("phoneCont", "phoneIcon")}
                 onBlur={() => handleInputBlur("phoneCont", "phoneIcon")}
               />
             </div>
@@ -92,7 +111,7 @@ export default function GetInTouch() {
                 id="message"
                 placeholder="Message"
                 autoComplete="off"
-                onClick={() => handleInputClick("msgCont", "msgIcon")}
+                onFocus={() => handleInputClick("msgCont", "msgIcon")}
                 onBlur={() => handleInputBlur("msgCont", "msgIcon")}
                 rows={5}
               ></textarea>
@@ -104,74 +123,6 @@ export default function GetInTouch() {
             </div>
           </form>
         </div>
-        {/* <form className="contact-form">
-          <div class="input-container">
-            <div style={{ height: "80px" }}>
-              <FontAwesomeIcon icon={faUser} className="icon" />
-            </div>
-            <input
-              class="input-field"
-              type="text"
-              placeholder="Username"
-              name="usrnm"
-            />
-          </div>
-
-          <div class="input-container">
-            <div style={{ height: "100%" }}>
-              <FontAwesomeIcon icon={faUser} className="icon" />
-            </div>
-            <input
-              class="input-field"
-              type="text"
-              placeholder="Email"
-              name="email"
-            />
-          </div>
-
-          <div class="input-container">
-            <div style={{ height: "100%" }}>
-              <FontAwesomeIcon icon={faUser} className="icon" />
-            </div>
-            <input
-              class="input-field"
-              type="password"
-              placeholder="Password"
-              name="psw"
-            />
-          </div>
-
-          <button type="submit" class="btn">
-            Register
-          </button>
-        </form> */}
-        {/* <div className="contact-form-cont">
-          <div className="try-cont" id="nid1">
-            <FontAwesomeIcon icon={faUser} />
-            <input placeholder="Name" className="i-t1" onClick={func1} />
-          </div>
-
-          <form className="form-group">
-            <span>
-              <FontAwesomeIcon icon={faUser} />
-            </span>
-            <input
-              type="text"
-              name="username"
-              className="form-control"
-              autoComplete="off"
-              placeholder="Name"
-            />
-            <div className="input-cont">
-              <input
-                type="text"
-                name="username"
-                placeholder="Name"
-                className="contact-form-input"
-              />
-            </div>
-          </form>
-        </div> */}
       </div>
     </section>
   );

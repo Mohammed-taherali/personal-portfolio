@@ -9,6 +9,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Education from "../components/Education";
 import GetInTouch from "../components/GetInTouch";
+import MyFooter from "../components/MyFooter";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Projects />
       <Education />
       <GetInTouch />
+      <MyFooter />
     </main>
   );
 }
