@@ -480,6 +480,7 @@ li::marker {
 .submit-btn {
   margin-top: 1em;
   background-color: #2506ad !important;
+  color: white !important;
 }
 
 .try-cont {
