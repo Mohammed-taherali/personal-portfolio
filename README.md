@@ -2,6 +2,9 @@
 
 ## Check out my website: [Mohammed Taherali](https://mohammedtaherali.netlify.app/)
 
+## Sneak peak of first page!
+![Portfolio preview](https://github.com/Mohammed-taherali/personal-portfolio/blob/master/public/assets/portfolio-preview.png?raw=true)
+
 ### Introduction
 This is my single-page portfolio website built using [ReactJS](https://react.dev/).
 
